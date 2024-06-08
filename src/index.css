@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.shadoww:hover {
+    /* box-shadow: 10px 10px 10px -10px red; */
+    transition: all;
+    transition-duration: 0.7s;
+    /* transition-delay: 0.5s; */
+    box-shadow: rgba(231, 4, 4, 0.986) 0px 1px 0px, rgba(245, 4, 4, 0.959) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}

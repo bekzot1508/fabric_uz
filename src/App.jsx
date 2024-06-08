@@ -1,6 +1,7 @@
  
 import './App.css'
 import Navbar from './Navbar/Navbar'
+import FooterMenu from './components/FooterMenu'
 import HomePage from './pages/HomePages/HomePage'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <>
       <Navbar/>
       <HomePage/>
+      <FooterMenu/>
     </>
   )
 }

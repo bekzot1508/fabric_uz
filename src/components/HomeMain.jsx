@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 // import React from 'react'
 import HomeMainphoto from '../assets/main_hero.png'
-import HomeMainphoto2 from '../assets/homeMain2.png'
+
 import HomeMainTruck from '../assets/noun_delivery_1095359.svg'
 import HomeMainTick from '../assets/tick_noun_guarantee_952398.svg'
 import HomeMainHeadphone from '../assets/headphone-995.svg'
@@ -58,21 +58,7 @@ const HomeMain = () => {
             </ul>
        </div>
        
-       {/* Fofa part 2 */}
-       <div className='bg-[#31384d] w-full mx-auto lg:h-[350px] h-[500px]  my-[300px] rounded-2xl text-white lg:flex lg:flex-row lg:justify-between flex flex-col pt-[190px] lg:pt-0  2xl:px-[60px] xl:px-[30px] lg:px-[15px]  items-center relative ' >
-             <img className='absolute 2xl:top-[-300px] xl:top-[-200px] lg:top-[-150px] md:top-[-270px] sm:top-[-180px] es:top-[-100px] top-[-30px] 2xl:pl-[40px] xl:pl-0 xl:pr-[140px] lg:pl-[15px] lg:pr-[110px]' src={HomeMainphoto2} alt="" />
-           <div className='flex flex-col items-center lg:gap-6 '>
-             <p className='font-[900] 2xl:text-9xl lg:text-8xl sm:text-7xl text-6xl '>100%</p>
-             <p className='font-[600] sm:text-2xl text-lg'>Material quality</p>
-           </div>
-           <div className='flex flex-col text-center lg:text-left w-[400px] lg:gap-8 gap-4 lg:pl-[90px] xl:pl-[60px]  2xl:pl-0 '>
-              <p className='font-[800] sm:text-3xl text-2xl'>'Bukhara Natural Product'</p>
-              <p className='text-wrap text-center lg:text-left text-gray-300 w-[300px] sm:w-full mx-auto'>
-                has been a company that produces cotton fabrics for use all over the world for many years
-              </p>
-              <button className='rounded-full bg-white text-[#31384d] font-[600] text-lg w-[170px] lg:self-start self-center  py-2'>Collection</button>
-           </div>
-       </div>
+     
     </div>
   )
 }
