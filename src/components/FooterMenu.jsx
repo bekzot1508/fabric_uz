@@ -5,8 +5,8 @@ import logo from '../assets/logo.png'
 const FooterMenu = () => {
   return (
     <div>
-        <div className='mt-[120px] 2xl:max-w-[1400px] xl:max-w-[1100px] lg:max-w-[950px]  md:max-w-[700px] sm:max-w-[550px] es:max-w-[430px] max-w-[310px] mx-auto'>
-          <div className='lg:grid lg:grid-cols-4 md:grid md:grid-cols-2 grid grid-cols-1 gap-8'>
+        <div className='mt-[150px] 2xl:max-w-[1400px] xl:max-w-[1100px] lg:max-w-[950px]  md:max-w-[700px] sm:max-w-[550px] es:max-w-[430px] max-w-[310px] mx-auto'>
+          <div className='lg:grid lg:grid-cols-4 md:grid md:grid-cols-2 grid grid-cols-1 gap-8 px-8 sm:px-0'>
             {/* footer logo */}
              <div>
                 <img src={logo} alt="" />
@@ -59,8 +59,8 @@ const FooterMenu = () => {
              </div>
           </div>
         </div>
-        <div className='bg-black py-6 mt-20 md:mt-32'>
-            <div className='2xl:max-w-[1400px] xl:max-w-[1100px] lg:max-w-[950px]  md:max-w-[700px] sm:max-w-[550px] es:max-w-[430px] max-w-[310px] mx-auto'>
+        <div className='bg-black py-6 mt-20 md:mt-32 '>
+            <div className='2xl:max-w-[1400px] xl:max-w-[1100px] lg:max-w-[950px]  md:max-w-[700px] sm:max-w-[550px] es:max-w-[430px] max-w-[310px] mx-auto gap-8 px-8 sm:px-0'>
                 <p className='text-gray-500 font-[500]'>
                    © 2024 LLC "BUKHARA NATURAL PRODUCT". All rights reserved.
                 </p>
