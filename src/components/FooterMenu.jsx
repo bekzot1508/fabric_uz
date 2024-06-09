@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-// import React from 'react'
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png'
 
 const FooterMenu = () => {
@@ -9,7 +9,9 @@ const FooterMenu = () => {
           <div className='lg:grid lg:grid-cols-4 md:grid md:grid-cols-2 grid grid-cols-1 gap-8 px-8 sm:px-0'>
             {/* footer logo */}
              <div>
-                <img src={logo} alt="" />
+                <Link to={"/"}>
+                  <img src={logo} alt="" />
+                </Link>
                 <p className='mt-8 pr-12 text-sm text-gray-500'>
                  'Bukhara Natural Product' has been a company that produces cotton fabrics for many years for use all over the world.
                 </p>
@@ -19,17 +21,17 @@ const FooterMenu = () => {
              <div>
                 <h3 className='text-xl font-[700] mb-3'>Menu</h3>
                 <ul>
-                    <li>
-                        <a href="#">Home</a>
+                    <li className='cursor-pointer'>
+                        <Link to={"/"}>Home</Link>
                     </li>
-                    <li>
-                        <a href="#">About US</a>
+                    <li className='cursor-pointer'>
+                        <Link to={"about"}>About US</Link>
                     </li>
-                    <li>
-                        <a href="#">Collection</a>
+                    <li className='cursor-pointer'>
+                        <Link to={"collection"}>Collection</Link>
                     </li>
-                    <li>
-                        <a href="#">Contacts</a>
+                    <li className='cursor-pointer'>
+                        <Link to={"contact"}>Contacts</Link>
                     </li>
                 </ul>
              </div>

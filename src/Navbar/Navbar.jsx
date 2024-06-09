@@ -1,5 +1,6 @@
 import  { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 import Logo from '../assets/logo.png'
 
 const Navbar = () => {
@@ -13,16 +14,17 @@ const Navbar = () => {
 
   // Array containing navigation items
   const navItems = [
-    { id: 1, text: 'Home' },
-    { id: 2, text: 'Company' },
-    { id: 3, text: 'Resources' },
-    { id: 4, text: 'About' },
-    { id: 5, text: 'Contact' },
+    { id: 1, text: 'Home', link:'/'},
+    { id: 2, text: 'Collection', link:'/collection' },
+    { id: 3, text: 'about', link:'/about' },
+    { id: 4, text: 'Contact', link:'/contact' },
   ];
 
   return (
     <div className='bg-black flex fixed top-0 right-0 left-0 z-50 justify-between md:gap-4 items-center h-24 max-w-[1920px] mx-auto xl:pl-[200px] md:pl-[40px] xl:pr-[400px] md:pr-[90px] px-6 text-white'>
-       <img className='w-[200px] text-white' src={Logo} alt="" />
+      <Link to={"/"}>
+        <img className='w-[200px] text-white' src={Logo} alt="" />
+      </Link>
 
       {/* Desktop Navigation */}
       <ul className='hidden md:flex'>
@@ -30,8 +32,10 @@ const Navbar = () => {
           <li
             key={item.id}
             className='p-4 hover:bg-[#00df9a] rounded-xl m-2 cursor-pointer duration-300 hover:text-black'
-          >
-            {item.text}
+          > 
+            <Link to={item.link}>
+              {item.text}
+            </Link>
           </li>
         ))}
       </ul>
@@ -59,7 +63,9 @@ const Navbar = () => {
             key={item.id}
             className='p-4 border-b rounded-xl hover:bg-[#00df9a] duration-300 hover:text-black cursor-pointer border-gray-600'
           >
-            {item.text}
+            <Link to={item.link}>
+              {item.text}
+            </Link>
           </li>
         ))}
       </ul>
