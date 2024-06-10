@@ -1,9 +1,14 @@
-import React from 'react'
+// import React from 'react'
+
+import CollectionFull from "../../components/CollectionFull"
+
+ 
 
 const CollectionPage = () => {
+ 
   return (
     <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis soluta consectetur veniam officiis omnis molestiae tenetur non, architecto sapiente accusantium expedita possimus vitae nihil sit, quia veritatis nisi ducimus fugiat quam unde provident. Ratione ipsa minima atque magni quo officiis ipsum, ducimus repellat voluptatum unde dolores itaque architecto dolor eveniet adipisci possimus dignissimos in. Inventore, quisquam. Exercitationem, odio adipisci. Facere maiores dolore illo eum nulla ex ipsam est nihil inventore unde quo, fuga cum cupiditate distinctio enim, ducimus voluptatem error voluptate nobis necessitatibus ullam, quasi provident omnis. Harum, vitae error? Dolorem ab tenetur, hic esse ea explicabo voluptatibus expedita, mollitia autem deleniti, eaque excepturi inventore blanditiis laboriosam pariatur! Tempore quaerat eveniet, iusto molestiae aliquid iste repudiandae eligendi incidunt aut impedit est rem odit quas dignissimos illo beatae quae earum autem quia. Praesentium, nisi ex. Delectus, quidem corporis aspernatur aperiam hic eligendi explicabo dolore libero voluptas dicta a cum placeat inventore quibusdam reprehenderit, quos beatae, voluptatum ea quo eaque. Sequi ratione dignissimos incidunt neque aperiam quibusdam, provident facere tempora. Dicta voluptas magnam doloribus reiciendis facilis, libero sequi illum sapiente, nihil assumenda eaque expedita. Excepturi est optio enim obcaecati, mollitia id tempore unde facilis ipsa veritatis cupiditate officiis at asperiores voluptate alias praesentium corporis quod hic quisquam quae totam ex quos deserunt ratione. Aut eveniet sapiente consequuntur expedita commodi hic aperiam repellendus, possimus nemo officia atque, autem doloremque, eius voluptatum delectus. Ducimus consequuntur laboriosam nemo totam, error ex reiciendis? Esse perferendis, praesentium facere magni dolorum nesciunt molestias repudiandae, voluptatem et minima amet a tenetur reprehenderit quidem optio rerum vel ab. Molestiae, ratione nisi eaque commodi ducimus, quae veritatis tempora quis, officia corrupti nesciunt dolor atque consectetur. Impedit unde tempora id perferendis dolor quo nemo dolorem non quidem sint, voluptas adipisci, quia odit veniam amet laborum! Rem in repellat voluptatibus, sint labore harum.
+       <CollectionFull/>
     </div>
   )
 }

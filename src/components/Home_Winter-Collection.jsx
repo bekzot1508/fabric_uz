@@ -1,17 +1,18 @@
 // import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import HomeMainphoto2 from '../assets/homeMain2.png'
 import HomeMainphoto3 from '../assets/Autumn_sofa.png'
 import HomeMainphoto4 from '../assets/Summer_main_sofa.png'
 // winter collections
-import picture1 from '../assets/Winter_Collections/Winter_Bambi.jpg'
-import picture2 from '../assets/Winter_Collections/Winter_Byzantium.jpg'
-import picture3 from '../assets/Winter_Collections/Winter_Circles.jpg'
-import picture4 from '../assets/Winter_Collections/Winter_Evening-garden.jpg'
-import picture5 from '../assets/Winter_Collections/Winter_Feather Marquis.jpg'
-import picture6 from '../assets/Winter_Collections/Winter_Geometry blue.jpg'
+import picture1 from '../assets/Winter_Collections/winter_Bambi.jpg'
+import picture2 from '../assets/Winter_Collections/winter_Byzantium.jpg'
+import picture3 from '../assets/Winter_Collections/winter_Circles.jpg'
+import picture4 from '../assets/Winter_Collections/winter_Evening garden.jpg'
+import picture5 from '../assets/Winter_Collections/winter_Feather Marquis.jpg'
+import picture6 from '../assets/Winter_Collections/winter_Geometry blue.jpg'
 import picture7 from '../assets/Winter_Collections/winter_Ikat.jpg'
 import picture8 from '../assets/Winter_Collections/Winter_Lavender-roses.jpg'
-import picture9 from '../assets/Winter_Collections/Winter_Squares.jpg'
+import picture9 from '../assets/Winter_Collections/winter_Squares.jpg'
 import picture10 from '../assets/Winter_Collections/Winter_Tropical-leaves.jpg'
 // autumn collections
 import pictures1 from '../assets/Automn_Collections/aut_Autumn-leaf-fall.jpg'
@@ -35,10 +36,12 @@ import pictures_7 from '../assets/Summer_collections/sum_Olive-branch.jpg'
 import pictures_8 from '../assets/Summer_collections/sum_Sakura branch.jpg'
 import pictures_9 from '../assets/Summer_collections/sum_Vintage style.jpg'
 import pictures_10 from '../assets/Summer_collections/sum_fluttering dandelion.jpg'
+ 
 
 
 
 const HomeWinterCollection = () => {
+    const navigate = useNavigate()
     const winterData = [
         {img: picture1, name: "Bambi"},
         {img: picture2, name: "Byzantium"},
@@ -99,7 +102,7 @@ const HomeWinterCollection = () => {
                 <div className='lg:grid lg:grid-cols-5 grid grid-cols-2 gap-6 mt-20'>
                     {
                         winterData.map((item, index) => (
-                            <div key={index} className=''>
+                            <div key={index} onClick={() => navigate(`/detailed/:${item.id}`)}>
                                 <img className='rounded-2xl cursor-pointer' src={item.img} alt={item.name} />
                                 <p className='mt-2 pl-2 hover:text-red-700 hover:italic hover:font-[500]'>{item.name}</p>
                             </div>
@@ -131,7 +134,7 @@ const HomeWinterCollection = () => {
                 <div className='lg:grid lg:grid-cols-5 grid grid-cols-2 gap-6 mt-20'>
                     {
                         autumnData.map((item, index) => (
-                            <div key={index} className=''>
+                            <div key={index} onClick={() => navigate(`/detailed/:${item.id}`)}>
                                 <img className='rounded-2xl cursor-pointer' src={item.img} alt={item.name} />
                                 <p className='mt-2 pl-2 hover:text-red-700 hover:italic hover:font-[500]'>{item.name}</p>
                             </div>
@@ -163,7 +166,7 @@ const HomeWinterCollection = () => {
                 <div className='lg:grid lg:grid-cols-5 grid grid-cols-2 gap-6 mt-20'>
                     {
                         SummerData.map((item, index) => (
-                            <div key={index} className=''>
+                            <div key={index} onClick={() => navigate(`/detailed/:${item.id}`)}>
                                 <img className='rounded-2xl cursor-pointer' src={item.img} alt={item.name} />
                                 <p className='mt-2 pl-2 hover:text-red-700 hover:italic hover:font-[500]'>{item.name}</p>
                             </div>
