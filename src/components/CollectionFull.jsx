@@ -2,13 +2,18 @@ import {useState} from 'react'
 import {Data} from './imgData.js'
 import { MagnifyingGlass} from "@phosphor-icons/react";
 import { useNavigate } from 'react-router-dom';
+import { Button, Modal } from 'antd';
 
 const CollectionFull = () => {
   const navigate = useNavigate()
   const [generalPi, setGeneralPi] = useState(Data.filter(item => 1 == item.main_page))
   const [category, setCategory] = useState(true)
   const [sort, setsort] = useState(false)
-    // console.log(Data);
+  const [springTogle, setSpringTogle] = useState(false)
+  const [input, setinput] = useState(null)
+ 
+
+    
     // General
   const general_16 = Data.filter(item => 1 == item.main_page)
   const general_32 = Data.filter(item => 2 == item.main_page)
@@ -31,8 +36,18 @@ const CollectionFull = () => {
   const categoryAutumn = Data.filter(item => "Autumn collection" === item.category && 1 == item.page)
   const categoryAutumn_2 = Data.filter(item => "Autumn collection" === item.category && 2 == item.page)
 
-
-  console.log( categoryWinter);
+  const SubmitInput = (e) => {
+    e.preventDefault() 
+     const input2 =input.toLocaleLowerCase()
+     setGeneralPi(Data.filter(item => input2 == item.name.toLocaleLowerCase()))
+     document.getElementById("form").reset()
+  }
+    console.log(input);
+ 
+  const getInput = (e) => {
+    setinput(e.target.value);
+  }
+ 
   
 
   return (
@@ -41,21 +56,21 @@ const CollectionFull = () => {
       {/* container */}
       <div className='flex gap-20'>
          <div >
-          <form >
+          <form onSubmit={SubmitInput} id='form'>
             <div className='relative '>
-              <input type="text" placeholder='Search Here' className='border-2 rounded-full px-8 py-3 bg-gray-300' />
-              <button className='absolute top-[6px] right-[10px] bg-red-500 rounded-full px-2 py-2 '>
+              <input type="text" placeholder='Search Here' onChange={getInput} className='border-2 rounded-full px-8 py-3 bg-gray-300' />
+              <button type='submit' className='absolute top-[6px] right-[10px] bg-red-500 rounded-full px-2 py-2 '>
                 <MagnifyingGlass color='white' size={24} />
               </button>
             </div>
           </form>
-          <button onClick={() => setCategory(!category)} className='mt-20'>Categories</button>
+          <button onClick={() => setCategory(!category)} className='mt-20 font-[700] text-[18px]'>Categories</button>
            <div className={`${category ? "block" : "hidden"}`}>
             <div className='flex flex-col gap-2 mt-5'>
-              <button type='button' onClick={() => setGeneralPi(categoryWinter)}>Spring collection</button>
-              <button type='button' onClick={() => setGeneralPi(categoryWinter)}>Winter collection</button>
-              <button type='button' onClick={() => setGeneralPi(categorySummer)}>Summer collection</button>
-              <button type='button' onClick={() => setGeneralPi(categoryAutumn)}>Autumn collection</button>
+              <button type='button' onClick={() => setSpringTogle(true)} className='text-left'>Spring collection</button>
+              <button type='button' onClick={() => setGeneralPi(categoryWinter)} className='text-left'>Winter collection</button>
+              <button type='button' onClick={() => setGeneralPi(categorySummer)} className='text-left'>Summer collection</button>
+              <button type='button' onClick={() => setGeneralPi(categoryAutumn)} className='text-left'>Autumn collection</button>
             </div>
            </div>
          </div>
@@ -104,7 +119,9 @@ const CollectionFull = () => {
               <button type='button' onClick={() => setGeneralPi(general_rest)}  className={`bg-red-600 rounded-xl py-2 px-3 text-white`}>5</button>
             </div>
           </div>
-       
+          <Modal title="Spring collection" open={springTogle} onOk={() => setSpringTogle(false)} onCancel={() => setSpringTogle(false)}>
+            <p>No products were found matching your request.</p>
+          </Modal>
         </div>
       </div>
     </div>

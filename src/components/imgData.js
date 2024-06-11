@@ -132,7 +132,7 @@ export const Data = [
             Manufacturer: "Bukhara Natural Product"
         },
         {
-            id: 90,
+            id: 0,
             image: Wdata_3,
             name: "Tropical leaves",
             category:"Winter collection",

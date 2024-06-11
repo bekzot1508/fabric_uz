@@ -21,16 +21,16 @@ const FooterMenu = () => {
              <div>
                 <h3 className='text-xl font-[700] mb-3'>Menu</h3>
                 <ul>
-                    <li className='cursor-pointer'>
+                    <li className='cursor-pointer hover:text-red-600 hover:font-[600]'>
                         <Link to={"/"}>Home</Link>
                     </li>
-                    <li className='cursor-pointer'>
+                    <li className='cursor-pointer hover:text-red-600 hover:font-[600]'>
                         <Link to={"about"}>About US</Link>
                     </li>
-                    <li className='cursor-pointer'>
+                    <li className='cursor-pointer hover:text-red-600 hover:font-[600]'>
                         <Link to={"collection"}>Collection</Link>
                     </li>
-                    <li className='cursor-pointer'>
+                    <li className='cursor-pointer hover:text-red-600 hover:font-[600]'>
                         <Link to={"contact"}>Contacts</Link>
                     </li>
                 </ul>

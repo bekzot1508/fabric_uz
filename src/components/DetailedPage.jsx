@@ -8,7 +8,13 @@ const DetailedPage = () => {
   const navigate = useNavigate()
  
   const dataDetailed = Data.filter(item => item.id == number)
-  console.log(dataDetailed);
+
+  
+  const similarProducts = Data.filter(item => item.category == dataDetailed[0].category)
+  const rendomSimiral = similarProducts.filter(item => item.id > 4 * Math.floor(Math.random() * 10) + 4).slice(0,4)
+
+   
+  
 
  
   return (
@@ -51,6 +57,42 @@ const DetailedPage = () => {
                        </div>     
                 ))
             }
+
+            {/* Review */}
+             {/* riview */}
+            <div className='mt-40 lg:max-w-[1000px] mx-auto'>
+              <hr />
+              <form action="">
+               <div  className='grid grid-cols-2 sm:gap-10 gap-2 mt-20'>
+                <div>
+                    <label htmlFor="">Name *</label>
+                    <input type="text" className='bg-gray-300 block rounded-full py-3 w-full mt-3' />
+                  </div>
+                  <div>
+                    <label htmlFor="">Email *</label>
+                    <input type="text" className='bg-gray-300 block rounded-full py-3 w-full mt-3' />
+                  </div>
+               </div>
+              <div className='mt-10'>
+                 <label htmlFor="">Your feedback *</label>
+                 <textarea name="" id=""  rows="8" className='bg-gray-300 block rounded-xl py-3 w-full mt-3'></textarea>
+              </div>
+              <button type="submit" className="rounded-full mt-8 bg-red-600 py-3 px-16 font-[500]  hover:bg-slate-600 mr-3 text-white place-content-end">Submit</button>
+              </form>
+            </div>
+
+            {/* similar products */}
+            <h2 className='text-5xl font-[800] text-center my-20'>Similar products</h2>
+            <div className='lg:grid lg:grid-cols-4 es:grid es:grid-cols-2 grid grid-cols-1 w-full gap-5 mt-20 lg:max-w-[1200px] mx-auto'>
+               {
+               rendomSimiral.map((item, index) => (
+                 <div key={index} onClick={() => navigate(`/detailed/:${item.id}`)} >
+                   <img className='rounded-2xl' src={item.image} alt={item.name} />
+                   <p className=' mt-2 pl-2 text-blue-700 hover:text-red-700 hover:italic hover:font-[700]  font-[600]'>{item.name}</p>
+                 </div>
+               ))
+               }
+            </div>
        </div>
     
   )
